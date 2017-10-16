@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <title>金鼎九州</title>
+    <link rel='shortcut icon' href='jingding.ico'>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+    <script type="text/javascript" src="js/bootsnav.js"></script>
+    <style type="text/css">
+        #allmap {width: 1200px;height: 563px;overflow: hidden;margin:0;font-family:"微软雅黑";}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=yaDRGoon5YoRzAAwH781yUgn"></script>
+</head>
+
+<body>
+<!--头部-->
+<div class="jq22-container">
+    <div class="headImg">
+        <a href="#" class="headImgA"><img src="images/logoa.png" alt=""></a>
+        <a href="#"><img src="images/guohui.png" alt=""></a>
+        <span class="headTal"><img src="images/tal.png" alt=""><i>010-62111211</i></span>
+    </div>
+    <div class="demo" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-default navbar-mobile bootsnav">
+                        <div class="collapse navbar-collapse" id="navbar-menu">
+                            <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+                                <li class="dropdown" style="margin-left: 50px">
+                                    <a href="index.html" class="" data-toggle="">首页</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="about.html" class="" data-toggle="">关于我们</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">公司简介</a></li>
+                                        <li><a href="#">企业文化</a></li>
+                                        <li><a href="#">公司资质</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="product.html" class="" data-toggle="">产品展示</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">服务器</a></li>
+                                        <li><a href="#">存储器</a></li>
+                                        <li><a href="#">网络设备</a></li>
+                                        <li><a href="#">工作站</a></li>
+                                        <li><a href="#">服务器配件产品</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="news.html" data-toggle="">新闻资讯</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">新闻咨询</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a href="service.html">合作伙伴</a></li>
+
+                                <li><a href="contact.html">联系我们</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--头部-->
+<!--幻灯片-->
+<div class="banner banner_s"><img src="images/banner1.jpg" alt=""/></div>
+<!--幻灯片-->
+<div class="scd clearfix">
+    <div class="scd_l">
+        <div class="name"><img src="images/sn4.png" width="142" height="47" alt=""/></div>
+        <ul class="s_nav clearfix">
+            <li class="now">
+                <a href=""><span>联系方式</span></a>
+            </li>
+            <li>
+                <a href=""><span>客户留言</span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="scd_r">
+        <div class="r_title">
+            联系方式<span>/<em>Contact information</em></span>
+        </div>
+        <div class="scd_m">
+            <div class="contact clearfix">
+                <h1>北京金鼎九州科技有限公司</h1>
+                <dl class="clearfix">
+                    <dt><a href=""><img src="images/pic10.jpg" alt=""/></a></dt>
+                    <dd>
+                        <p>地址：深圳沙井街道洪田工业区</p>
+                        <p>TEL：0755-00000000</p>
+                        <p>FAX：0755-00000000</p>
+                        <p>E-mail：bailongqiaokj@163.com    http：//www.ads.中国</p>
+                        <p>全国统一服务热线：400 0000000</p>
+                    </dd>
+                </dl>
+                <div class="space_hx">&nbsp;</div>
+                <div id="allmap"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="f_bg">
+    <div class="foot">
+        <p>北京金鼎九州科技发展有限公司 版权所有
+            Copyright © 2007-2016 <br>北京网警网络110 北京工商 京公网安备 31011302000653号</p>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    // 百度地图API功能
+    //谷歌坐标
+    var x = 116.4237100000;
+    var y = 39.9809300000;
+    var ggPoint = new BMap.Point(x,y);
+    //地图初始化
+    var bm = new BMap.Map("allmap");
+    bm.centerAndZoom(ggPoint, 15);
+    bm.addControl(new BMap.NavigationControl());
+    //添加谷歌marker和label
+    var markergg = new BMap.Marker(ggPoint);
+    bm.addOverlay(markergg); //添加谷歌marker
+</script>
+</html>
