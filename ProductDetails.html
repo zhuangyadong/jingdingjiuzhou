@@ -6,8 +6,7 @@
     <title>产品展示</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css">
-
-
+    <script src="js/jquery-1.11.0.js"></script>
     <style>
         
         .box{
@@ -35,6 +34,7 @@
             float: left;
             margin: 30px;
             border: 1px solid #ccc;
+            box-sizing: content-box;
         }
         .productImg img{
             width: 260px;
@@ -69,17 +69,16 @@
             width: 126px;
             height: 40px;
             border-radius: 4px;
-            margin: 40px auto;
             background: #ff9c00;
+            margin: 40px 0 0 30px;
         }
         .btn a{
             width: 126px;
             height: 40px;
             color: #fff;
-            float: left;
-            line-height: 40px;
             text-align: center;
             font-size: 20px;
+            text-decoration: none;
         }
         .details{
             width: 1200px;
@@ -110,25 +109,7 @@
 </head>
 <body>
 <!--头部-->
-<div class="head clearfix">
-    <div class="logo"><a href="index.html"><img src="images/logoa.png" alt="白龙桥"/></a></div>
-    <div class="head_r">
-        <div class="r_top">
-            <span>全国免费咨询电话：<b>4000-000-000</b></span>
-        </div>
-        <div class="nav_m">
-            <div class="n_icon">导航栏</div>
-            <ul class="nav clearfix">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="about.html">关于我们</a></li>
-                <li class="now"><a href="product.html">产品展示</a></li>
-                <li><a href="news.html">新闻资讯</a></li>
-                <li><a href="service.html">服务支持</a></li>
-                <li><a href="contact.html">联系我们</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+<div class="header"></div>
 <!--头部-->
 <!--幻灯片-->
 <div class="banner banner_s"><img src="images/banner3.jpg" alt=""/></div>
@@ -174,5 +155,8 @@
             Copyright © 2007-2016 <br>北京网警网络110 北京工商 京公网安备 31011302000653号</p>
     </div>
 </div>
+<script>
+    $(".header").load("header.html")
+</script>
 </body>
 </html>

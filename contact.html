@@ -8,6 +8,7 @@
     <link rel='shortcut icon' href='jingding.ico'>
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/jquery-1.11.0.js"></script>
     <style type="text/css">
         #allmap {width: 1200px;height: 563px;overflow: hidden;margin:0;font-family:"微软雅黑";}
     </style>
@@ -16,25 +17,7 @@
 
 <body>
 <!--头部-->
-<div class="head clearfix">
-    <div class="logo"><a href="index.html"><img src="images/logoa.png" alt="金鼎九州"/></a></div>
-    <div class="head_r">
-        <div class="r_top">
-            <span>全国免费咨询电话：<b>4000-000-000</b></span>
-        </div>
-        <div class="nav_m">
-            <div class="n_icon">导航栏</div>
-            <ul class="nav clearfix">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="about.html">关于我们</a></li>
-                <li><a href="product.html">产品展示</a></li>
-                <li><a href="news.html">新闻资讯</a></li>
-                <li><a href="service.html">服务支持</a></li>
-                <li class="now"><a href="contact.html">联系我们</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+<div class="header"></div>
 <!--头部-->
 <!--幻灯片-->
 <div class="banner banner_s"><img src="images/banner1.jpg" alt=""/></div>
@@ -52,8 +35,10 @@
         </ul>
     </div>
     <div class="scd_r">
-        <div class="r_title">
-            联系方式<span>/<em>Contact information</em></span>
+        <div class="i_name" style="width: 1200px;margin: 0 auto">
+            <div class="title" style="margin-bottom: 0">
+                <h5>联系方式</h5>
+            </div>
         </div>
         <div class="scd_m">
             <div class="contact clearfix">
@@ -82,6 +67,7 @@
 </div>
 </body>
 <script type="text/javascript">
+    $(".header").load("header.html");
     // 百度地图API功能
     //谷歌坐标
     var x = 116.4237100000;
